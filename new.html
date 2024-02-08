@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신제품. 나이키 코리아</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <style>
+        h4{
+            margin: 0;
+            color: #111111;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .noti{
+            background-color: #f5f5f5;
+            height: 44px;
+            padding: 10px 0 0;
+            text-align: center;
+        }
+        .noti-silder{
+            height: 44px;
+            width: 100%;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        .noti-silder>ul{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            width: 200%; /* li 요소가 2개이므로 200%로 설정. li 요소의 개수에 따라 변경 필요 */
+            transition: transform 0.5s ease-out;
+        }
+        .noti-1{
+            width: 100%;
+            color: #111111;
+        }
+        .noti-1 > span{
+            font-size: 16px;
+        }
+        .noti-1>p{
+            margin: 5px 0 0 0;
+            font-size: 12px;
+        }
+        .noti-1>p>a{
+            color: #111111;
+        }
+        .noti-li{
+            width: 50%;
+            text-align: center;
+            display: inline-block;
+        }
+        /* --------------------------------- 상단 바 ------------------------------------- */
+        .headerbar{
+            width: 93%;
+            margin: auto;
+            padding-top: 10px;
+            height: 52.5px;
+            background-color: white;
+        }
+        .bar{
+            width: 50%;
+            float: left;
+        }
+        .bar > span{
+            margin-left: 25px;
+        }
+        #span-bar{
+            text-align: right;
+            line-height: 52.5px;
+        }
+        .bar > h1{
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        /* --------------------------------- 상품란 ------------------------------------- */
+        .container {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+        .card{
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;  /* .card의 너비를 조절하세요. */
+            margin: auto;  /* 중앙으로 정렬하려면 추가하세요. */
+        }
+        .category{
+            /* background-color: rgb(147, 147, 147); */
+            width: 260px;
+            height: vh;
+        }
+        #product-card {
+            margin: auto;
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .product-card {
+            flex-basis: calc(33.33% - 20px);
+            box-sizing: border-box;
+            margin: 10px 10px 40px 10px;
+        }
+
+        .card-row {
+            /* width: 10%; */
+            display: flex;
+            justify-content: flex-start;
+        }
+        img{
+            width: 100%;
+        }
+        h5{
+            color: rgb(143, 0, 0);
+            font-size: 15px;
+            font-weight: 500;
+            margin: 10px 0;
+        }
+        h4{
+            font-size: 18px;
+            font-weight: 500;
+        }
+        p{
+            color: gray;
+        }
+        label>input{
+            margin: 40px 10px 10px 10px;
+            
+        }
+        label{
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header></header>
+    <div>
+        <!-- 슬라이드 형식으로 안내 문구가 나감 (ul, li사용?) -->
+        <div class="noti">
+            <div class="noti-silder">
+                <ul>
+                    <li class="noti-li">
+                        <div class="noti-1">
+                            <span>설 연휴 기념 매장 픽업 서비스 이벤트 안내</span>
+                            <p><a href="#">자세히 보기</a></p>
+                        </div>
+                        
+                    </li>
+                    <li class="noti-li">
+                        <div class="noti-1">
+                            <span>설 연휴 배송 및 고객센터 운영 안내</span>
+                            <p><a href="#">자세히 보기</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="headerbar">
+            <!-- 신제품 부분 -->
+            <div class="bar">
+                <h1>신제품(469)</h1>
+            </div>
+            <!-- 필터 숨기기 / 정렬 기준 -->
+            <div class="bar" id="span-bar">
+                <span>필터 숨기기</span>
+                <span>정렬 기준:</span>
+            </div>
+        </div>
+
+        <!-- 본문 내용 -->
+        <div class="card">
+            <!-- 카테고리 란 / 자바스크립트로 필터 삽입(신제품만 골라보는??) -->
+            <div class="category">
+                <label>
+                    <input type="checkbox" class="box">
+                    신제품
+                </label>
+            </div>
+             <!-- 상품카드 란 / 컴포넌트로 상품카드 만들기 -->
+             <div id="product-card">
+    
+             </div>
+        </div>
+    </div>
+
+
+    <footer></footer>
+    <!-- 공지사항 배너 스크립트 부분 -->
+    <script>
+        // 나이키 사이트에서는 5초에 한 번씩 배너가 넘어간다.
+        // 배너 하나당 사이즈를 100%로 잡았으니 이동할 사이즈도 100%로 맞춤
+        setInterval(function(){
+            $('.noti-silder>ul').delay(5000);
+            $('.noti-silder>ul').animate({marginLeft: "-100%"})
+            $('.noti-silder>ul').delay(5000);
+            $('.noti-silder>ul').animate({marginLeft: "0px"})
+        });
+    </script>
+    <script src="./new.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>footer</title>
+        <style>
+            body{
+                margin: 0;
+                /* background-color: #111111; */
+            }
+            .main-footer{
+                background-color: #111111;
+            }
+            .footer{
+                background-color: #111111;
+                color: white;
+                padding: 40px 40px 0;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 1440px;
+            }
+            .footer-content{
+                display: flex; /*가로 정렬하기*/
+                margin-bottom: 16px;
+            }
+            .footer-content ul{
+                display: inline-block; 
+                list-style: none; 
+                margin: 0 40px;
+            }
+            .content-left{
+                /* float:left; */
+                width: 19%;
+            }
+            .content-left ul{
+                margin: 0;
+                padding: 0;
+            }
+            .content-left1 a, li{
+                color: white;
+                margin: 0;
+                text-align: left;
+                height: 27px;
+                margin: 0 0 3px 0;
+                text-decoration: none; 
+                
+            }
+            #left1{
+                font-size: 14px;
+                text-decoration: none; 
+                list-style-type: none;
+                color: white;
+            }
+            #font > li{
+                font-size: 12px;
+                color: gray;
+            }
+            .content-right{
+                text-align: right;
+                width: 28%;
+            }
+            .img-link{
+                width: 30px;
+                margin-left: 9px;
+                opacity: 0.5;
+                transition: 0.2s ease-out;
+            }
+            .img-link:hover{
+                opacity: 1;
+                transition: 0.2s ease-out;
+            }
+            .sub-footer{
+                padding: 12px 6px 0 8px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .sub{
+                width: 50%;
+            }
+            #sub-right{
+                text-align: right;
+            }
+            #sub-right > a{
+                color: white;
+                text-decoration: none; 
+                font-size: 12px;
+                margin-left: 30px;
+            }
+            
+            .location{
+                width: 13px;
+                margin-right: 10px;
+            }
+            hr{
+                margin: 15px 0 15px 0;
+            }
+            .section{
+                text-decoration: none;
+                font-size: 11px;
+                color: gray;
+            }
+            .section > a{
+                color: #cccccc;
+            }
+            .section-div{
+                padding-top: 12px;
+            }
+            .footer-section{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 22px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-footer">
+            <div class="footer">
+            <div class="footer-content">
+                <div class="content-left">
+                    <ul class="content-left1">
+                        <a id="left1" href="#"><li>새로운 소식</li></a>
+                        <a id="left1" href="#"><li>멤버십가입</li></a>
+                        <a id="left1" href="#"><li>매장안내</li></a>
+                        <a id="left1" href="#"><li>나이키 저널</li></a>
+                    </ul>
+                </div>
+                <div class="content-left">
+                    <ul class="content-left1">
+                        <a id="left1" href="#"><li>도움말</li></a>
+                        <a id="font" href="#"><li>로그인 안내</li></a>
+                        <a id="font" href="#"><li>주문배송조회</li></a>
+                        <a id="font" href="#"><li>반품 정책</li></a>
+                        <a id="font" href="#"><li>결제 방법</li></a>
+                        <a id="font" href="#"><li>공지사항</li></a>
+                        <a id="font" href="#"><li>문의하기</li></a>
+                    </ul>
+                </div>
+                <div class="content-left">
+                    <ul class="content-left1">
+                        <a id="left1" href="#"><li>ABOUT NIKE</li></a>
+                        <a id="font" href="#"><li>소식</li></a>
+                        <a id="font" href="#"><li>채용</li></a>
+                        <a id="font" href="#"><li>투자자</li></a>
+                        <a id="font" href="#"><li>지속가능성</li></a>
+                    </ul>
+                </div>
+                <div class="content-left"></div>
+                <div class="content-right">
+                    <a><img class="img-link" src="../imgs/트위터.png"></a>
+                    <a><img class="img-link" src="../imgs/페북.png"></a>
+                    <a><img class="img-link" src="../imgs/유튜브.png"></a>
+                    <a><img class="img-link" src="../imgs/인스타.png"></a>
+                </div>
+            </div>
+            <div class="sub-footer">
+                <div class="sub">
+                    <img class="location" src="../imgs/위치.png"><span style="font-size: 12px;">대한민국</span>
+                    <span style="font-size: 12px; color: gray; margin-left: 16px;">© 2023 Nike, Inc. All Rights Reserved</span>
+                </div>
+                <div class="sub" id="sub-right">
+                    <a href="#" style="color: gray;">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#" style="color: gray;">위치 기반 서비스 약관</a>
+                    <a href="#" style="color: gray;">영상정보처리기기 운영 방침</a>
+                </div>
+            </div><hr>
+            <div class="footer-section">
+                <div class="sub">
+                    <span class="section">(유)나이키코리아 대표 Kimberlee Lynn Chang Mendes, 킴벌리 린 창 멘데스 | 서울 강남구 테헤란로 152 강남파이낸스센터 30층 |<br> 통신판매업신고번호 2011-서울강남-03461 | 등록번호 220-88-09068</span>
+                    <span class="section"><a href="#">사업자 정보 확인</a></span>
+                    <div class="section-div">
+                        <span class="section">고객센터 전화 문의</span>
+                        <span class="section"><a href="#">080-022-0182</a></span>
+                        <span class="section">FAX 02-6744-5880 | 이메일</span>
+                        <span class="section"><a href="#">service@nike.co.kr</a></span>
+                        <span class="section">| 호스팅서비스사업자 (유)나이키코리아</span>
+                    </div>
+                </div>
+                <div class="sub">
+                    <span class="section">현금 등으로 결제 시 안전 거래를 위해 나이키 쇼핑몰에서 가입하신 한국결제네트웍스 유한회사의 구매안전 서비스(<a href="#">결재대금에치</a>)를 이용하실 수 있습니다.</span>
+                    <div class="section-div">
+                        <span class="section">콘텐츠산업진흥법에 의한 콘텐츠 보호 안내</span>
+                        <span class="section"><a href="#">자세히 보기</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+    </body>
+</html>

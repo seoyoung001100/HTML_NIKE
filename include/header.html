@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>header</title>
+        <style>
+            @font-face {
+                font-family: 'neon';
+                src: url('../srcs/AppleSDGothicNeoL.woff2') format('woff');
+            }
+            .navTop{
+                background-color: #f5f5f5;
+                height: 36px;
+                padding: 0 38px 0 36px;
+                line-height: 36px;
+                font-size: 12.5px;
+            }
+            .navBottom{
+                /* background-color: aquamarine; */
+                height: 62px;
+                line-height: 62px;
+                padding: 4px 0 0 0;
+            }
+            body {
+                margin: 0;
+            }
+            .drop-menu{
+                /* height: 64px; */
+                text-align: center;
+                line-height: 62px;
+            }
+            .menu-title{
+                padding: 0;
+                
+            }
+            ul.menu-title {
+                height: 62px;
+                list-style: none; 
+                background-color: white; 
+                margin: 0;
+                width: 50%;
+                float: left;
+            }
+            .menu-title li {
+                display: inline-block; 
+                /* margin: 20px 50px; */
+                
+
+            }
+            .menu-title a {
+                color: black; 
+                text-decoration: none; 
+                font-size: 16px;
+                font-weight: bold;
+                font-family: neon, sans-serif;
+                padding: 12px 12px 10px;
+            }
+            .item-title{
+                font-weight: bold;
+                font-size: 17px;
+                padding-top: 40px;
+            }
+            /* .menu-title a:hover, .menu-title a:focus {
+                color: #f99;
+            } */
+            .menu-title a span {
+                display: inline-block;
+            }
+            .menu-title li {
+                position: relative;
+            }
+            /* 마우스 올리면 언더바 보임 */
+            .menu-title li>a:hover::after { 
+                content: "";
+                width: 100%;
+                height: 2px;
+                position: absolute;
+                bottom: -3px; /* 언더바의 위치 조절 */
+                left: 0;
+                background-color: rgb(0, 0, 0);
+                margin-bottom: 10px;
+            }
+
+
+            .drop-item {
+                background: white; 
+                position: absolute; 
+                top: 110px; 
+                left: 0; 
+                width: 100%; 
+                /* padding: 20px;  */
+                display: none;
+                text-align: left;
+            }
+            .drop-item ul {
+                display: inline-block; 
+                list-style: none; 
+                margin: 0 40px;
+            }
+            .drop-item ul li {
+                margin: 0;
+            }
+            .drop-item li:not(.item-title){
+                margin: 0;
+                height: 30px;
+                font-size: 12px;
+            }
+            .drop-item ul a {
+                text-decoration: none; 
+                color: #666;
+            }
+
+            .nav-img{
+                float:left;
+                margin: 5px;
+                height: 28px;
+            }
+            /* .nav-img img{
+                width: 25px;
+            } */
+            .nav-info{
+                /* display:inline-block; */
+                float: right;
+                color: black;
+            }
+            .nav-info a{
+                margin: 0 10px 0 10px;
+                color: black;
+            }
+            .logo-img{
+                width: 22%;
+                height: 62px;
+                float: left;
+                padding: 0 0 0 36px;
+                line-height: 62px;
+            }
+            .logo{
+                width: 68px;
+                vertical-align:middle;
+                margin: 10px;
+                padding: 0 5px 8px 0;
+            }
+            .searchbar{
+                width: 24%;
+                float: right;
+                background-color: white;
+                height: 62px;
+                display: flex;
+                align-items: center;
+            }
+            .search{
+                background-color: #f3f3f3;
+                width: 180px;
+                height: 40px;
+                border-radius:20px;
+                display: flex;
+                align-items: center;
+            }
+            .search-text{
+                width: 100px;
+                outline: none;
+                border:none;
+                background: transparent;
+                font-size: 16.8px;
+                color: #d4d4d4;
+                /* font-weight: bold; */
+            }
+            .search-img {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 10px;
+                margin: 20px;
+            }
+
+            .icon-link {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 10px 0 10px;
+            }
+
+            .heart-icon {
+                width: 26px;
+            }
+
+            .bag-icon {
+                width: 20px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div class="navTop">
+                <div class="nav-img">
+                    <!-- 이미지 들어가는 부분 왼쪽 정렬 -->
+                    <a href="#"><img style="width: 20px; padding: 2px 4px 0 10px;" src="../imgs/pngwing.com.png"></a>
+                    <a href="#"><img style="width: 38px; padding: 2px 0 0 10px;" src="../imgs/Converse-Logo.png"></a>
+                </div>
+                <div class="nav-info">
+                    <a>매장찾기</a> |
+                    <a>고객센터</a> |
+                    <a>가입하기</a> |
+                    <a>로그인</a>
+                </div>
+            </div>
+            <div class="navBottom">
+                <div class="logo-img">
+                    <!-- 나이키 로고 -->
+                    <img class="logo" src="../imgs/나이키1.png">
+                </div>
+                <div class="drop-down">
+                    <!-- 가운데 / 애플 스디 산돌고딕, 맑은고딕 -->
+                    <div class="drop-menu">
+                        <ul class="menu-title">
+                            <li><a href="#">New Releases</a></li>
+                            <li><a href="#">Men</a></li>
+                            <li><a href="#">Women</a></li>
+                            <li><a href="#">Kids</a></li>
+                            <li><a href="#">Sale</a></li>
+                            <li><a href="#">SNKRS</a></li>
+                            <li><a href="#">Find Your Feel</a></li>
+                        </ul>
+                        <div class="drop-item">
+                            <ul>
+                                <li class="item-title"><a href="#">New & Featured</a></li> <!-- 타이틀 -->
+                                <li><a href="#">신제품 전체보기</a></li>
+                                <li><a href="#">SNKRS</a></li>
+                                <li><a href="#">Find Your Feel</a></li>
+                                <li><a href="#">나이키 캠버스 컬렉션</a></li>
+                                <li><a href="#">아우터 컬렉션</a></li>
+                                <li><a href="#">멤버 전용 제품</a></li>
+                                <li><a href="#">Y2K 컬렉션</a></li>
+                                <li><a href="#">Best Sneakers Collection</a></li>
+                                <li><a href="#">윈터 아웃도어 & 트레일</a></li>
+                                <li><a href="#">ACG 신제품</a></li>
+                                <li><a href="#">Jordan 신제품</a></li>
+                            </ul>
+                            <ul>
+                                <li class="item-title"><a href="#">Shop Icons</a></li> <!-- 타이틀 -->
+                                <li><a href="#">에어 포스 1</a></li>
+                                <li><a href="#">덩크</a></li>
+                                <li><a href="#">에어 조던 1</a></li>
+                                <li><a href="#">에어맥스</a></li>
+                                <li><a href="#">줌 보메로 5</a></li>
+                                <li><a href="#">V2K</a></li>
+                                <li><a href="#">코르테즈</a></li>
+                                <li><a href="#">테크 헤라</a></li>
+                                <li><a href="#">페가수스</a></li>
+                                <li><a href="#">인피니티 런</a></li>
+                                <li><a href="#">메트콘</a></li>
+                            </ul>
+                            <ul>
+                                <li class="item-title"><a href="#">남성 신제품</a></li> <!-- 타이틀 -->
+                                <li><a href="#">신발</a></li>
+                                <li><a href="#">의류</a></li>
+                                <li><a href="#">용품</a></li>
+                                <li><a href="#">전체보기</a></li>
+                            </ul>
+                            <ul>
+                                <li class="item-title"><a href="#">여성 신제품</a></li> <!-- 타이틀 -->
+                                <li><a href="#">신발</a></li>
+                                <li><a href="#">의류</a></li>
+                                <li><a href="#">용품</a></li>
+                                <li><a href="#">전체보기</a></li>
+                            </ul>
+                            <ul>
+                                <li class="item-title"><a href="#">키즈 신제품</a></li> <!-- 타이틀 -->
+                                <li><a href="#">신발</a></li>
+                                <li><a href="#">의류</a></li>
+                                <li><a href="#">용품</a></li>
+                                <li><a href="#">전체보기</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    
+                </div>
+                <div class="searchbar">
+                    <!-- 검색창 및 찜, 장바구니 -->
+                    <div class="search">
+                        <img style="width: 22px; padding: 11px;" src="../imgs/icons8-수색-30.png">
+                        <input class="search-text" type="text" placeholder="검색">
+                    </div>
+                    <div class="search-img">
+                        <a class="icon-link"><img class="heart-icon" src="../imgs/icons8-하트-25.png"></a>
+                        <a class="icon-link"><img class="bag-icon" src="../imgs/icons8-가방-48.png"></a>
+                    </div>                      
+                </div>
+            </div>
+        </nav>
+        <script>
+            $(function() {
+                $(".drop-down").on("mouseenter focusin", function() {
+                    $(".drop-item").stop().slideDown(150);
+                }).on("mouseleave", function() {
+                    $(".drop-item").stop().slideUp(100);
+                });
+            });
+        </script>
+    </body>
+
+</html>
